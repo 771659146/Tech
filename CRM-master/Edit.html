@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Edit</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/main.css" />
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=cyrillic-ext"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic-ext"
+			rel="stylesheet"
+		/>
+	</head>
+
+	<body class="with-nav">
+		<!-- Навигация по проекту -->
+		<nav class="project-nav">
+			<div class="project-nav__links-wrapper">
+				<a href="index.html">نموذج الطلب</a>
+				<a href="table.html">الجدول مع أوامر</a>
+				<a href="edit.html">تحرير تطبيق</a>
+			</div>
+		</nav>
+
+		<!-- main-wrapper -->
+		<div class="form-wrapper">
+			<div class="container-fluid">
+				<!-- row -->
+				<div class="row justify-content-between align-items-center">
+					<div class="col">
+						<div class="admin-heading-1">العمل مع التطبيق</div>
+					</div>
+					<div class="col text-right">
+						<a href="index.html" class="btn btn-link">الرجوع الى الخلف</a>
+					</div>
+				</div>
+				<!-- // row -->
+				<!-- row -->
+				<div class="row">
+					<!-- col -->
+					<div class="col">
+						<form id="form">
+							<!-- card -->
+							<div class="card mb-4">
+								<div class="card-header">بيانات التطبيق</div>
+								<div class="card-body">
+									<div class="row mb-3">
+										<div class="col-md-2">
+											<strong>معرف</strong>
+										</div>
+										<div class="col">طلب رقم 1<span id="number">1</span></div>
+										<input name="id" type="hidden" id="id">
+									</div>
+
+									<div class="row mb-3">
+										<div class="col-md-2">
+											<strong>تاريخ الانشاء</strong>
+										</div>
+										<div class="col" id="date">2020-04-20 13:52:13</div>
+									</div>
+
+									<div class="row mb-3">
+										<div class="col-md-2">
+											<strong>الدورة:</strong>
+										</div>
+										<div class="col">
+											<select id="product" name="product" class="custom-select" >
+												<option value="course-html">...</option>
+												<option value="course-html">C++</option>
+												<option value="course-js">
+													JavaScript
+												</option>
+												<option value="course-vue">Python</option>
+												<option value="course-php">PHP</option>
+												<option value="course-wordpress">
+													WordPress
+												</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="row mb-3">
+										<div class="col-md-2">
+											<strong>اسم</strong>
+										</div>
+										<div class="col">
+											<input
+												type="text"
+												class="form-control"
+												value=""
+												id="name"
+												name="name"
+											/>
+										</div>
+									</div>
+
+									<div class="row mb-3">
+										<div class="col-md-2">
+											<strong>البريد الإلكتروني</strong>
+										</div>
+										<div class="col">
+											<input
+												type="text"
+												class="form-control"
+												value="info@inbox.ru"
+												id="email"
+												name="email"
+												/>
+										</div>
+									</div>
+
+									<div class="row mb-3">
+										<div class="col-md-2">
+											<strong>تلفون</strong>
+										</div>
+										<div class="col">
+											<input
+												type="text"
+												class="form-control"
+												value="+967 "
+												id="phone"
+												name="phone"
+												/>
+										</div>
+									</div>
+
+									<div class="row mb-3">
+										<div class="col-md-2">
+											<strong>حالة الطلب</strong>
+										</div>
+										<div class="col">
+											<select class="custom-select" id="status" name="status">
+												<option selected="">...</option>
+												<option value="new">جديد</option>
+												<option value="inwork">متقدم</option>
+												<option value="complete">مكتمل</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //card -->
+							<div class="row justify-content-between">
+								<div class="col text-right">
+									<button type="submit" class="btn btn-primary">حفظ التغييرات</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<!-- //col -->
+				</div>
+				<!-- //row -->
+			</div>
+		</div>
+		<!-- // main-wrapper -->
+
+		<!-- Модель -->
+		<script src="./js/model.js" type="module"></script>
+
+		<!-- Редактирование -->
+		<script src="./js/edit/edit.view.js" type="module"></script>
+		<script src="./js/edit/edit.controller.js" type="module"></script>
+
+	</body>
+</html>
